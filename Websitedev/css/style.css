@@ -161,6 +161,8 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
+  /* Prevent wrapping on desktop */
 }
 
 .nav-logo {
@@ -212,7 +214,10 @@ ul {
 .hero-content {
   z-index: 2;
   position: relative;
-  margin-top: 60px;
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .hero-tag {
@@ -423,8 +428,11 @@ footer {
 
   .hero {
     min-height: 100vh;
-    padding: 140px 0 80px;
+    padding: 160px 0 80px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .hero-content {
@@ -434,24 +442,25 @@ footer {
   .hero-content>div {
     padding: 40px 24px !important;
     width: 100%;
+    max-width: 600px;
   }
 
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
-    gap: 20px;
+    gap: 24px;
   }
 
   .bento-1,
   .bento-2 {
     grid-column: span 2;
-    height: 400px;
+    height: 450px;
   }
 
   .bento-3,
   .bento-4 {
     grid-column: span 1;
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -460,42 +469,52 @@ footer {
     padding: 0 20px;
   }
 
+  .nav-inner {
+    padding: 0;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    gap: 8px;
+  }
+
   .nav-logo img {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
   }
 
   .nav-logo span {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .btn {
-    padding: 14px 28px;
-    font-size: 0.75rem;
+    padding: 12px 24px;
+    font-size: 0.7rem;
   }
 
   .h-xl {
-    font-size: 3rem;
+    font-size: 2.75rem;
   }
 
   .h-lg {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
 
   .h-md {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
 
   .p-lg {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 
   .section-v {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .bento-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .bento-1,
@@ -503,15 +522,15 @@ footer {
   .bento-3,
   .bento-4 {
     grid-column: span 1;
-    height: 350px;
+    height: 380px;
   }
 
   .bento-content {
-    padding: 24px;
+    padding: 32px 24px;
   }
 
   .bento-content h3 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .modal-content {
@@ -519,7 +538,7 @@ footer {
   }
 
   .reveal {
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
 }
 
