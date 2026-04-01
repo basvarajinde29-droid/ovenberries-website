@@ -114,4 +114,25 @@ if (orderModal && orderBtns.length > 0) {
   });
 }
 
+// ── Mobile Menu Toggle ──────────────────
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+
+if (navToggle && mobileMenu) {
+  navToggle.addEventListener('click', () => {
+    navToggle.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
+  });
+
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navToggle.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+  });
+}
+
 console.log('☕ OvenBerries Boutique Roastery UI Loaded');
