@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | OvenBerries – O'n'B Café</title>
+    <meta name="description"
+        content="Explore the full OvenBerries menu. Artisan coffee, all-day breakfast, wood-fired pizzas, and gourmet burgers in Nanded." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 48px;
+            margin-top: 60px;
+        }
+
+        .menu-cat-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--latte);
+            border-bottom: 2px solid var(--bean);
+            padding-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .menu-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .menu-item-simple {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(245, 230, 211, 0.1);
+            transition: var(--transition);
+        }
+
+        .menu-item-simple:hover {
+            padding-left: 12px;
+            background: rgba(245, 230, 211, 0.05);
+        }
+
+        .menu-item-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--latte);
+        }
+
+        .menu-item-desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        .menu-section-wrap {
+            margin-bottom: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ Navbar ══════════════════════════ -->
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="O'n'B Café Logo" />
+                <span>OvenBerries</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html" class="active">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══ Page Hero ═══════════════════════ -->
+    <section class="section-v menu-hero"
+        style="padding-top: 240px; padding-bottom: 120px; text-align: center; position: relative; overflow: hidden; background: var(--espresso);">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.1; background-image: url('images/real-burger.jpg'); background-size: cover; background-position: center;">
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div
+                style="display: inline-block; padding: 48px 64px; background: rgba(27, 18, 18, 0.6); backdrop-filter: blur(20px); border-radius: var(--radius-xl); border: 1px solid var(--glass-border); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);">
+                <div class="hero-tag" style="margin-bottom: 16px;">✦ Handcrafted Flavours ✦</div>
+                <h1 class="h-lg" style="margin-bottom: 16px;">Our Menu</h1>
+                <p class="p-lg" style="max-width: 600px; margin: 0 auto;">Every dish tells
+                    a story of fresh ingredients and culinary passion.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+
+        <!-- ── Morning & All-Day Breakfast ────── -->
+        <div class="menu-section-wrap reveal">
+            <h2 class="h-lg" style="margin-bottom: 40px;">Morning & All-Day Breakfast</h2>
+            <div class="menu-grid">
+
+                <!-- Plated Breakfast -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Plated Breakfast</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">Chole Kulcha</span>
+                            <span class="menu-item-desc">Classic chole masala and baked kulcha with ginger juliennes and
+                                cilantro greens.</span>
+                        </div>
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">O’n’B Breakfast</span>
+                            <span class="menu-item-desc">English breakfast with egg of choice, bubble & squeak, griddled
+                                tomato, roasted potato wedges, seared mushrooms, bread toast and butter.</span>
+                        </div>
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">O’n’B Pancakes</span>
+                            <span class="menu-item-desc">Classic, Blueberry, or Choco Chip. Stacked layer of fresh
+                                griddled pancakes with butter and maple syrup.</span>
+                        </div>
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">Cali Breakfast Burrito</span>
+                            <span class="menu-item-desc">Famous hand burritos with herb rice, refried beans, tempered
+                                paneer or eggs and hot sauce.</span>
+                        </div>
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">Classic French Toast</span>
+                            <span class="menu-item-desc">Fluffy brioche breads seared with housemade custard, icing
+                                sugar and sweetened cream.</span>
+                        </div>
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">Turkish Sofrito Eggs</span>
+                            <span class="menu-item-desc">Spiced onion and capsicum sauce, with fried eggs and layered
+                                cheese sauce, served with garlic bread.</span>
+                        </div>
+                        <div class="menu-item-simple">
+                            <span class="menu-item-name">Overnight Oats</span>
+                            <span class="menu-item-desc">Oats with milk and yogurt, chia seeds, banana, pomegranate
+                                seeds, pumpkin seeds.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Eggs & Omelettes -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Eggs & Omelettes</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Eggs Your Way</span><span
+                                class="menu-item-desc">Boiled, Double Fried, Sunny Side, Bhurji, or Scrambled with
+                                Cheese.</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Masala Omelette</span><span
+                                class="menu-item-desc">Onion, green chilies, tomato, coriander leaves.</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Spanish Style Omelette</span><span
+                                class="menu-item-desc">Stuffed herb potatoes, mushrooms with house seasoning.</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Cheese Omelette</span><span
+                                class="menu-item-desc">Cheddar cheese and mozzarella.</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Florentine Omelette</span><span
+                                class="menu-item-desc">Tempered spinach and cheese.</span></div>
+                    </div>
+                </div>
+
+                <!-- Sandwiches & Toasties -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Sandwiches & Toasties</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Croissant Sandwiches</span><span
+                                class="menu-item-desc">Tex Mex Paneer, Guacamole & Pickled Onions, Paneer Bhurji, Egg
+                                Bhurji, Roast Chicken & Cheddar, Grilled Chicken & Tomatoes.</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Bread Sandwiches</span><span
+                                class="menu-item-desc">Grilled Cheese, Spiced Cottage Cheese, Grilled Zucchini &
+                                Cheddar, Chicken Cheese Melt, Fajita Chicken.</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">O’n’B Speciality Toasties</span><span
+                                class="menu-item-desc">Hot Sauce Paneer & Guacamole, Mushroom & Creamed Spinach, Hot
+                                Sauce Chicken & Guacamole, Chicken Caesar.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Small Plates & Greens ──────────── -->
+        <div class="menu-section-wrap reveal">
+            <h2 class="h-lg" style="margin-bottom: 40px;">Small Plates & Greens</h2>
+            <div class="menu-grid">
+
+                <!-- Starters -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Starters</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Chips and Salsa</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Basket of Fries</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Chicken Pops</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Paneer Pops</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Messed Up Nachos</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Onion Rings</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Hot Pan Paneer / Chicken</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Chimichangas</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">O’n’B Quesadillas</span></div>
+                    </div>
+                </div>
+
+                <!-- Salads & Soups -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Salads & Soups</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">House Salad</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Caesar Salad</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Green / O’n’B Cobb Salad</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Wedge Salad</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Honey Mustard Salad</span></div>
+                        <div class="menu-item-simple" style="margin-top: 16px;"><span class="menu-item-name">Broccoli
+                                Cheddar Soup</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Rustic Tomato Soup</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Cream of Chicken</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Chicken ‘n’ Shroom Bartoli</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wings -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Wings Mania</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Buffalo Wings</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Crispy Piri Piri Wings</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">BBQ Wings</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">K-Pop Wings</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Mains & Italian ────────────────── -->
+        <div class="menu-section-wrap reveal">
+            <h2 class="h-lg" style="margin-bottom: 40px;">Mains & Italian</h2>
+            <div class="menu-grid">
+
+                <!-- Pizza -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Wood-Fire Pizza</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Classic Margherita</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Red Wave</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Quattro Fromagi</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Veggie Lover</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Veg Festiva</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Florentine Mushroom</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Feta Paneer Chili</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Angry Bird</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Italian Hero</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Lazy Chicken</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Chicken Sicilian</span></div>
+                    </div>
+                </div>
+
+                <!-- Pasta -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Pasta Italian Way</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Spaghetti Aglio E Olio</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Spaghetti Bolognese</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Good Ol’ Mac N Cheese</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Alfredo / Arrabiata</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Pesto / Rosa</span></div>
+                    </div>
+                </div>
+
+                <!-- Burgers & Mains -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Burgers & Mains</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Corn Chappy Burger</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Shroom Melt Burger</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Light’s Out Burger</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Zingy Crisper Burger</span></div>
+                        <div class="menu-item-simple" style="margin-top: 16px;"><span class="menu-item-name">Cottage
+                                Cheese Shaslik</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Bean and Cheese Enchiladas</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Thai Curry (Veg/Chicken)</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Lasagna (Veg/Chicken)</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Chicken Steak and Frites</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Shish Tawook</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── The Coffee Bar ─────────────────── -->
+        <div class="menu-section-wrap reveal">
+            <h2 class="h-lg" style="margin-bottom: 40px;">The Coffee Bar</h2>
+            <div class="menu-grid">
+
+                <!-- Espresso -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Espresso Creations</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Espresso / Doppio</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">ONB Cortado</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Americano / Long Black</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Salted Caramel Macchiato</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Salted Pistachio Macchiato</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Peppermint Macchiato</span></div>
+                    </div>
+                </div>
+
+                <!-- Milk-Based -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Milk-Based Coffees</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Café Latte</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Vanilla / Hazelnut / Irish
+                                Latte</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Cappuccino</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Flat White</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Hot Mocha</span></div>
+                    </div>
+                </div>
+
+                <!-- Iced & Frappes -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Iced & Frappes</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Iced Americano / Spiced
+                                Americano</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Iced Coconut Water Americano</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Iced Latte / Mocha Latte</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Frappes (Classic, Mocha, Caramel,
+                                Hazelnut, Irish, Vanilla)</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Mocha Choco Chip / Espresso
+                                Brownie</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Refreshments & Sweets ──────────── -->
+        <div class="menu-section-wrap reveal">
+            <h2 class="h-lg" style="margin-bottom: 40px;">Refreshments & Sweets</h2>
+            <div class="menu-grid">
+
+                <!-- Milkshakes -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Milkshakes</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Simply Vanilla / Classic
+                                Strawberry</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Pure Chocolate / KitKat</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Oreo Cookie & Cream</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Choco Brownie / Banana Caramel</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Berry Blast / Blueberry</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Lotus Biscoff / Mango Magic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mocktails & Iced Tea -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Mocktails & Iced Tea</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Guava Chilli / Kokum Fizz</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Blue Ocean / Watermelon Splash</span>
+                        </div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Berry Hibiscus Pop / Virgin
+                                Mojito</span></div>
+                        <div class="menu-item-simple" style="margin-top: 16px;"><span class="menu-item-name">Iced
+                                Teas</span><span class="menu-item-desc">Peach Orange, Hibiscus Mint, Passionfruit
+                                Lemongrass, Watermelon Mint, Lemon, Roohafza.</span></div>
+                    </div>
+                </div>
+
+                <!-- Indulgence -->
+                <div class="menu-cat">
+                    <h3 class="menu-cat-title">Indulgence</h3>
+                    <div class="menu-list">
+                        <div class="menu-item-simple"><span class="menu-item-name">Signature Hot Chocolate</span></div>
+                        <div class="menu-item-simple"><span class="menu-item-name">Affogato</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ══ Footer ═══════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2025 OvenBerries O'n'B Café. All rights reserved. | Nanded, India</p>
+        </div>
+    </footer>
+
+    <!-- ══ Modal Popup ══════════════════════════ -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <div class="hero-tag">✦ Order Online ✦</div>
+            <h2 class="h-md" style="margin-bottom: 16px;">Choose Your Platform</h2>
+            <p class="p-sm" style="margin-bottom: 32px;">Order from your favorite delivery partner.</p>
+
+            <div class="order-options">
+                <a href="http://zoma.to/r/20695175" target="_blank" class="order-card">
+                    <i class="fas fa-motorcycle"></i>
+                    <div class="order-card-text">
+                        <div class="order-card-title">Order via</div>
+                        <div class="order-card-value">Zomato</div>
+                    </div>
+                </a>
+                <a href="tel:+917378373355" class="order-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="order-card-text">
+                        <div class="order-card-title">Ring Us On</div>
+                        <div class="order-card-value">+91 73783 73355</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

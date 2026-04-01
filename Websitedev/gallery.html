@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | OvenBerries – O'n'B Café</title>
+    <meta name="description"
+        content="A visual feast of OvenBerries O'n'B Café - artisan coffee, wood-fired pizzas, gourmet burgers, and cozy café interiors." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <style>
+        .gallery-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            padding: 80px 0;
+        }
+
+        .gallery-grid-full .bento-item {
+            height: 400px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-grid-full .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .gallery-grid-full .bento-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ══ Navbar ══════════════════════════ -->
+    <nav id="navbar" class="scrolled">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.jpg" alt="O'n'B Café Logo" />
+                <span>OvenBerries</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="menu.html" class="btn btn-primary">Order Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ══ Page Hero ═══════════════════════ -->
+    <section class="section-v gallery-hero"
+        style="padding-top: 240px; padding-bottom: 120px; text-align: center; position: relative; overflow: hidden; background: var(--espresso);">
+        <div id="gallery-hero-bg"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; opacity: 0.1; transition: opacity 1.5s ease-in-out; background-size: cover; background-position: center;">
+        </div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <div
+                style="display: inline-block; padding: 60px 80px; background: rgba(27, 18, 18, 0.6); backdrop-filter: blur(20px); border-radius: var(--radius-xl); border: 1px solid var(--glass-border); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);">
+                <div class="hero-tag reveal" style="margin-bottom: 24px;">✦ Visual Feast ✦</div>
+                <h1 class="h-lg reveal" style="margin-bottom: 24px;">Our Gallery</h1>
+                <p class="p-lg reveal" style="max-width: 600px; margin: 0 auto;">A glimpse
+                    into the handcrafted magic we create at OvenBerries every single day.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const galleryImages = [
+            'images/real-pizza.png',
+            'images/real-burger.jpg',
+            'images/real-pancakes.jpg',
+            'images/real-pasta.jpg',
+            'images/0ea71f99-0baf-4e22-a472-fdff18e233f5.JPG',
+            'images/ba80c888-ac63-4192-bbef-c0431bb2dd3b.JPG'
+        ];
+        let currentImgIndex = 0;
+        const bgDiv = document.getElementById('gallery-hero-bg');
+
+        function changeBg() {
+            bgDiv.style.opacity = 0;
+            setTimeout(() => {
+                bgDiv.style.backgroundImage = `url(${galleryImages[currentImgIndex]})`;
+                bgDiv.style.opacity = 0.1;
+                currentImgIndex = (currentImgIndex + 1) % galleryImages.length;
+            }, 1500);
+        }
+
+        if (bgDiv) {
+            bgDiv.style.backgroundImage = `url(${galleryImages[0]})`;
+            setInterval(changeBg, 5000);
+        }
+    </script>
+
+    <!-- ══ Gallery Section ═════════════════ -->
+    <section class="section-v">
+        <div class="container">
+            <div class="gallery-grid-full">
+                <div class="bento-item reveal"><img src="images/00a3b3fb-0a66-47e8-aced-7f12e0c61a83.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/0ea71f99-0baf-4e22-a472-fdff18e233f5.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/1ba1ddd4-6f0c-4719-b9da-126ad7f4d9f6.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/2d2a68e1-f28e-4c8e-b10b-e7525e034896.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/2fd30108-e38f-428c-8ba3-14e89413fe89.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/43164d45-830d-4255-bb12-d40dd6599471.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/5c57e07d-585d-4cae-9bb7-32c14f23bfcd.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/913b81db-7469-4ee8-adb0-28e903b48493.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/92d0966d-23f2-45c7-b387-337cdfe878f0.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/9e1e24fb-7441-48ce-a15b-20512c630668.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/a2b679f5-8453-4c42-bebd-0b5afd088c45.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/a4384418-11ce-4913-be65-a437e42f627f.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/a483422c-4c5a-4ad4-bca9-9a940d96896b.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/aa122f54-3bba-4a9e-984c-c9e00fc94be7.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/b50b2625-e186-4eff-b953-110c8dc12a88.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/ba80c888-ac63-4192-bbef-c0431bb2dd3b.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/e532a64a-dacb-4212-bf9c-e95881f8db32.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/e6c67616-d443-447d-8cd2-08fd338d56c6.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/ea1eef73-e241-4789-8348-d59eeda74f5c.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/f9a06908-0331-4bdb-909c-2c243011f113.JPG"
+                        alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/real-pizza.png" alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/real-burger.jpg" alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/real-pancakes.jpg" alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/real-pasta.jpg" alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/real-salad.jpg" alt="O'n'B Gallery" /></div>
+                <div class="bento-item reveal"><img src="images/real-soup.jpg" alt="O'n'B Gallery" /></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══ Footer ═══════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p class="copyright">© 2025 OvenBerries O'n'B Café. All rights reserved. | Nanded, India</p>
+        </div>
+    </footer>
+
+    <!-- ══ Modal Popup ══════════════════════════ -->
+    <div class="modal-overlay" id="orderModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <div class="hero-tag">✦ Order Online ✦</div>
+            <h2 class="h-md" style="margin-bottom: 16px;">Choose Your Platform</h2>
+            <p class="p-sm" style="margin-bottom: 32px;">Order from your favorite delivery partner.</p>
+
+            <div class="order-options">
+                <a href="http://zoma.to/r/20695175" target="_blank" class="order-card">
+                    <i class="fas fa-motorcycle"></i>
+                    <div class="order-card-text">
+                        <div class="order-card-title">Order via</div>
+                        <div class="order-card-value">Zomato</div>
+                    </div>
+                </a>
+                <a href="tel:+917378373355" class="order-card">
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="order-card-text">
+                        <div class="order-card-title">Ring Us On</div>
+                        <div class="order-card-value">+91 73783 73355</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
