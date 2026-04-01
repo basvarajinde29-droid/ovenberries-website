@@ -417,42 +417,81 @@ footer {
 /* ── Responsive ─────────────────────────── */
 @media (max-width: 1024px) {
   .hero-img-parallax {
-    position: relative;
-    width: 100%;
-    right: 0;
-    margin-top: 40px;
+    display: none;
+    /* Hide parallax image on mobile for better alignment */
   }
 
   .hero {
-    height: auto;
-    padding: 160px 0 80px;
+    min-height: 100vh;
+    padding: 140px 0 80px;
+    text-align: center;
+  }
+
+  .hero-content {
+    margin-top: 0;
+  }
+
+  .hero-content>div {
+    padding: 40px 24px !important;
+    width: 100%;
   }
 
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    gap: 20px;
   }
 
   .bento-1,
   .bento-2 {
     grid-column: span 2;
-    height: 500px;
+    height: 400px;
   }
 
   .bento-3,
   .bento-4 {
     grid-column: span 1;
-    height: 350px;
+    height: 300px;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
 
-  .nav-links {
-    display: none;
+  .nav-logo img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-logo span {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    font-size: 0.75rem;
+  }
+
+  .h-xl {
+    font-size: 3rem;
+  }
+
+  .h-lg {
+    font-size: 2.25rem;
+  }
+
+  .h-md {
+    font-size: 1.5rem;
+  }
+
+  .p-lg {
+    font-size: 1rem;
+  }
+
+  .section-v {
+    padding: 80px 0;
   }
 
   .bento-grid {
@@ -464,7 +503,23 @@ footer {
   .bento-3,
   .bento-4 {
     grid-column: span 1;
-    height: 400px;
+    height: 350px;
+  }
+
+  .bento-content {
+    padding: 24px;
+  }
+
+  .bento-content h3 {
+    font-size: 1.75rem;
+  }
+
+  .modal-content {
+    padding: 40px 20px;
+  }
+
+  .reveal {
+    transform: translateY(30px);
   }
 }
 
