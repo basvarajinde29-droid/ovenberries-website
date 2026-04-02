@@ -18,13 +18,13 @@ window.addEventListener('mousemove', (e) => {
   outline.animate({
     left: `${posX}px`,
     top: `${posY}px`
-  }, { duration: 500, fill: 'forwards' });
+  }, { duration: 150, fill: 'forwards' });
 });
 
 // Hover effect for cursor
 document.querySelectorAll('a, button, .bento-item').forEach(el => {
   el.addEventListener('mouseenter', () => {
-    outline.style.transform = 'translate(-50%, -50%) scale(2.5)';
+    outline.style.transform = 'translate(-50%, -50%) scale(1.5)';
     outline.style.borderColor = 'var(--gold)';
     outline.style.background = 'rgba(212, 175, 55, 0.1)';
     dot.style.transform = 'translate(-50%, -50%) scale(0)';

@@ -162,7 +162,12 @@ ul {
   align-items: center;
   justify-content: space-between;
   flex-wrap: nowrap;
-  /* Prevent wrapping on desktop */
+}
+
+.nav-left-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
 
 .nav-logo {
@@ -477,12 +482,11 @@ footer {
     width: 100%;
   }
 
-  .nav-actions {
+  .nav-left-group {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-    margin-left: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
 
   .nav-logo {
