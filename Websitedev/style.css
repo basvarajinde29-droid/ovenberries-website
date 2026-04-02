@@ -471,27 +471,31 @@ footer {
 
   .nav-inner {
     padding: 0;
-    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .nav-actions {
-    gap: 12px;
-    /* Space between Order Now and Hamburger */
     display: flex;
+    flex-direction: row;
     align-items: center;
+    gap: 15px;
+    margin-left: auto;
   }
 
   .nav-logo {
-    gap: 6px;
+    gap: 4px;
   }
 
   .nav-logo img {
-    width: 44px;
-    height: 44px;
+    width: 36px;
+    height: 36px;
   }
 
   .nav-logo span {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .btn {
