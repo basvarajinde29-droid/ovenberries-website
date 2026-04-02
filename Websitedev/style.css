@@ -167,7 +167,7 @@ ul {
 .nav-logo {
   font-family: 'Playfair Display', serif;
   font-weight: 900;
-  font-size: 2.25rem;
+  font-size: 2.75rem;
   color: var(--latte);
   display: flex;
   align-items: center;
@@ -175,8 +175,8 @@ ul {
 }
 
 .nav-logo img {
-  width: 64px;
-  height: 64px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -495,12 +495,12 @@ footer {
   }
 
   .nav-logo img {
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
   }
 
   .nav-logo span {
-    font-size: 0.9rem;
+    font-size: 1.25rem;
   }
 
   .btn {
