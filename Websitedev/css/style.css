@@ -7,23 +7,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 :root {
-  /* Color Palette */
-  --espresso: #1b1212;
-  --latte: #f5e6d3;
-  --bean: #4b3621;
-  --gold: #d4af37;
-  --gold-soft: #e7c76f;
-  --cream: #faf7f2;
-  --text-primary: #f5e6d3;
-  --text-secondary: rgba(245, 230, 211, 0.7);
-  --glass-bg: rgba(27, 18, 18, 0.7);
-  --glass-border: rgba(245, 230, 211, 0.1);
+  /* Color Palette - Alabaster Roast Light Mode */
+  --espresso: #fbfaf7;         /* Milk/Alabaster off-white background */
+  --latte: #1b1212;            /* Charcoal dark text / primary elements */
+  --bean: #261c14;             /* Deep roasted bean accent */
+  --gold: #c39a3b;             /* Rich gold accent */
+  --gold-soft: #d0a94e;        /* Soft gold */
+  --cream: #f6f3ed;            /* Warm cream card background */
+  --text-primary: #1b1212;     /* Charcoal primary text */
+  --text-secondary: rgba(27, 18, 18, 0.75); /* Muted primary text */
+  --glass-bg: rgba(251, 250, 247, 0.75); /* Frosted off-white glass */
+  --glass-border: rgba(27, 18, 18, 0.08); /* Clean thin border */
 
   /* Spacing & Radius */
   --radius-xl: 40px;
   --radius-lg: 24px;
   --radius-md: 16px;
-  --transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+  --transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* ── Base Styles ───────────────────────── */
@@ -53,8 +53,8 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   background:
-    radial-gradient(circle at 18% 12%, rgba(212, 175, 55, 0.08), transparent 28%),
-    linear-gradient(180deg, #1b1212 0%, #120b0b 100%);
+    radial-gradient(circle at 18% 12%, rgba(195, 154, 59, 0.04), transparent 28%),
+    linear-gradient(180deg, var(--espresso) 0%, #f5f3ef 100%);
 }
 
 img {
@@ -91,12 +91,12 @@ ul {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  color: var(--gold-soft);
-  background: rgba(27, 18, 18, 0.62);
-  border: 1px solid rgba(231, 199, 111, 0.54);
+  color: var(--gold);
+  background: rgba(251, 250, 247, 0.82);
+  border: 1px solid rgba(195, 154, 59, 0.4);
   box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.34),
-    inset 0 1px 0 rgba(245, 230, 211, 0.18);
+    0 12px 30px rgba(75, 54, 33, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
 }
 
@@ -182,8 +182,8 @@ ul {
   width: 54px;
   height: 54px;
   border-radius: 50%;
-  border: 1px solid rgba(212, 175, 55, 0.24);
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.16), transparent 64%);
+  border: 1px solid rgba(195, 154, 59, 0.15);
+  background: radial-gradient(circle, rgba(195, 154, 59, 0.08), transparent 64%);
 }
 
 .cursor-mug.active {
@@ -194,14 +194,14 @@ ul {
 }
 
 .cursor-mug.active::after {
-  background: rgba(27, 18, 18, 0.48);
+  background: rgba(38, 28, 20, 0.35);
   transform: scaleX(0.92);
 }
 
 .cursor-glow.active {
   transform: translate(-50%, -50%) scale(1.45);
-  background: radial-gradient(circle, rgba(231, 199, 111, 0.22), transparent 66%);
-  border-color: rgba(231, 199, 111, 0.58);
+  background: radial-gradient(circle, rgba(195, 154, 59, 0.18), transparent 66%);
+  border-color: rgba(195, 154, 59, 0.45);
 }
 
 @keyframes steamDrift {
@@ -409,20 +409,21 @@ ul {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--bean), #2b1b16);
+  background: linear-gradient(135deg, var(--bean), #1b1212);
   color: #ffffff;
-  box-shadow: 0 10px 30px rgba(75, 54, 33, 0.2), inset 0 1px 0 rgba(245, 230, 211, 0.12);
+  box-shadow: 0 10px 30px rgba(75, 54, 33, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary:hover {
   transform: translateY(-5px);
-  background: var(--espresso);
-  box-shadow: 0 20px 40px rgba(75, 54, 33, 0.3);
+  background: var(--gold);
+  color: #ffffff;
+  box-shadow: 0 15px 35px rgba(195, 154, 59, 0.25);
 }
 
 .btn-outline {
-  background: rgba(245, 230, 211, 0.04);
-  border: 1px solid rgba(245, 230, 211, 0.5);
+  background: rgba(38, 28, 20, 0.03);
+  border: 1px solid rgba(27, 18, 18, 0.3);
   color: var(--latte);
   backdrop-filter: blur(10px);
 }
@@ -880,19 +881,21 @@ footer .container {
 }
 
 .testimonial-card {
-  background: rgba(245, 230, 211, 0.03);
-  border: 1px solid rgba(245, 230, 211, 0.1);
+  background: var(--cream);
+  border: 1px solid rgba(38, 28, 20, 0.06);
   padding: 40px;
   border-radius: var(--radius-lg);
   transition: var(--transition);
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 30px rgba(75, 54, 33, 0.02);
 }
 
 .testimonial-card:hover {
-  background: rgba(245, 230, 211, 0.05);
+  background: #ffffff;
   transform: translateY(-10px);
   border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(75, 54, 33, 0.06);
 }
 
 .stars {
@@ -1470,18 +1473,20 @@ body:not(.custom-cursor-enabled) textarea {
 }
 
 .about-stat-card {
-  background: rgba(245, 230, 211, 0.03);
-  border: 1px solid rgba(245, 230, 211, 0.08);
+  background: var(--cream);
+  border: 1px solid rgba(38, 28, 20, 0.06);
   border-radius: var(--radius-md);
   padding: 32px 20px;
   text-align: center;
   transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(75, 54, 33, 0.02);
 }
 
 .about-stat-card:hover {
-  background: rgba(245, 230, 211, 0.06);
+  background: #ffffff;
   border-color: var(--gold);
   transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(75, 54, 33, 0.06);
 }
 
 .about-stat-number {
@@ -1599,13 +1604,14 @@ body:not(.custom-cursor-enabled) textarea {
 }
 
 .about-highlight-box {
-  background: rgba(245, 230, 211, 0.03);
-  border: 1px solid rgba(245, 230, 211, 0.1);
+  background: var(--cream);
+  border: 1px solid rgba(38, 28, 20, 0.06);
   border-radius: var(--radius-xl);
   padding: 60px 48px;
   margin: 100px auto;
   max-width: 1000px;
   text-align: left;
+  box-shadow: 0 15px 45px rgba(75, 54, 33, 0.03);
 }
 
 .about-highlight-box .box-date {
@@ -1671,8 +1677,8 @@ body:not(.custom-cursor-enabled) textarea {
 }
 
 .about-team-card {
-  background: linear-gradient(135deg, rgba(245, 230, 211, 0.03) 0%, rgba(27, 18, 18, 0.4) 100%);
-  border: 1px solid rgba(245, 230, 211, 0.08);
+  background: linear-gradient(135deg, var(--cream) 0%, rgba(246, 243, 237, 0.4) 100%);
+  border: 1px solid rgba(38, 28, 20, 0.06);
   border-radius: var(--radius-lg);
   padding: 48px 36px;
   text-align: left;
@@ -1680,7 +1686,7 @@ body:not(.custom-cursor-enabled) textarea {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(75, 54, 33, 0.03);
   position: relative;
   overflow: hidden;
 }
@@ -1701,10 +1707,10 @@ body:not(.custom-cursor-enabled) textarea {
 }
 
 .about-team-card:hover {
-  background: linear-gradient(135deg, rgba(245, 230, 211, 0.05) 0%, rgba(27, 18, 18, 0.5) 100%);
-  border-color: rgba(212, 175, 55, 0.3);
+  background: #ffffff;
+  border-color: rgba(195, 154, 59, 0.3);
   transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(212, 175, 55, 0.08);
+  box-shadow: 0 25px 50px rgba(75, 54, 33, 0.08);
 }
 
 .team-name {
@@ -1770,18 +1776,20 @@ body:not(.custom-cursor-enabled) textarea {
 }
 
 .about-pride-card {
-  background: rgba(245, 230, 211, 0.03);
-  border: 1px solid rgba(245, 230, 211, 0.08);
+  background: var(--cream);
+  border: 1px solid rgba(38, 28, 20, 0.06);
   border-radius: var(--radius-lg);
   padding: 40px 24px;
   text-align: center;
   transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(75, 54, 33, 0.02);
 }
 
 .about-pride-card:hover {
-  background: rgba(245, 230, 211, 0.06);
+  background: #ffffff;
   border-color: var(--gold);
   transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(75, 54, 33, 0.06);
 }
 
 .pride-icon {
